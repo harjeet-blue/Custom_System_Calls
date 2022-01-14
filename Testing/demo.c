@@ -8,7 +8,8 @@
 #include <stdlib.h>
 #include <errno.h>
 
-#define SYS_matrix_copy 550
+#define SYS_matrix_copy 550  // 550 is my syscall id, change 
+//this no according to your sycall id ( number which you gave it in the table )
 
 
 int main(int argc, char **argv)
