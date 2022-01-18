@@ -1,29 +1,29 @@
 #include <linux/kernel.h>
 #include <sys/syscall.h>
+#include <stdio.h>
 #include <unistd.h>
 #include <string.h>
 #include <errno.h>
-#include <stdio.h>
 
-#define New_sys_call 550   // 550 is my syscall id, change 
+#define __NR_identity 550  // 550 is my syscall id, change 
 //this no according to your sycall id ( number which you gave it in the table )
 
 long identity_syscall(void)
 {
-	return syscall(New_sys_call);
+	return syscall(__NR_identity);
 }
 
 int main(int argc, char *argv[])
 {
-	long result = identity_syscall();
+	long activity = identity_syscall();
 
-	if(result < 0)
+	if(activity < 0)
 	{
-		perror("fail");
+		perror("fail :( \n");
 	}
 	else
 	{
-		printf("Congrats, your syscall is working\n");
+		printf("Congrats, your syscall is working fine\n");
 	}
 
 	return 0;
