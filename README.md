@@ -14,7 +14,7 @@ Adding custom system calls to the linux kenel 5.14.3
 ```bash
     sudo tar -xvf linux-4.17.4.tar.xz -C/usr/src
 ```
-- ### Goto into **kernel** directory in the extracted folder
+- ### Go into **kernel** directory in the extracted folder
 ```bash
     cd /usr/src/linux-4.17.4/kernel
 ```
@@ -28,7 +28,7 @@ Adding custom system calls to the linux kenel 5.14.3
 
 # STEP 1
 ## writing/adding system call
-- Open **Syscall** folder of this repository to see the format a syscall & how to write a sycall funtion defination, that folder also has code for a system call (System_call.c )
+- Open **Syscall** folder of this repository to see the format of a syscall & how to write a sycall funtion defination, that folder also has code for a system call (System_call.c )
 
 - ### write your syscall code anywhere in sys.c file
 - eg (save your code in the file and exit from the file )
