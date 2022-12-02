@@ -61,9 +61,15 @@ Once you are done with the above steps, navigate back to the folder where you ex
 ### install modules
 ```bash
     sudo make modules_install install
+    sudo cp -v arch/x86/boot/bzImage /boot/vmlinuz-sam
+    sudo ls /usr/lib/modules
+    sudo mkinitcpio -k 5.19.9 -g /boot/initramfs-sam.img
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 ### reboot system
-
+```bash
+    sudo reboot
+```
 ## Testing
 
 - There's **test.c** file in Testing foler, read the comments carefully  and make necessary changes according to your syscall and run the code. if the code compiles and runs successfullly that means you have added the system call correctly
